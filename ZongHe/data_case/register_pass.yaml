@@ -1,0 +1,5 @@
+- casedata: {"mobilephone":18395748969,"pwd":123456789012345678,"regname":"小蜜蜂"}
+  expect: {"status":1,"code":10001,"data": None,"msg":"注册成功"}
+
+- casedata: {"mobilephone":17635847612,"pwd":123456,"regname":"小蜜蜂"}
+  expect: {"status":1,"code":10001,"data": None,"msg":"注册成功"}

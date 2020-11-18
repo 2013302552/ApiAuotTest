@@ -1,0 +1,24 @@
+- casedata: {"mobilephone": 1801234566, "pwd": 123456, "regname": "小蜜蜂"}
+  expect: {"status": 0, "code": 20109, "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {"mobilephone": 18012345674, "pwd": 12345, "regname": "小蜜蜂"}
+  expect: {"status": 0, "code": 20108, "data": None, "msg": "密码长度必须为6~18"}
+
+- casedata: {"mobilephone":null,"pwd":"123456abc","regname":"小蜜蜂"}
+  expect: {"status":0,"code":20103, "data": None,"msg":"手机号不能为空"}
+
+- casedata: {"mobilephone":137123456789,"pwd":"123456abc","regname":"小蜜蜂"}
+  expect: {"status": 0, "code": 20109, "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {"mobilephone":"1371234111a","pwd":"123456abc","regname":"小蜜蜂"}
+  expect: {"status": 0, "code": 20109, "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {"mobilephone":"1371234444#","pwd":"123456abc","regname":"小蜜蜂"}
+  expect: {"status": 0, "code": 20109, "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {"mobilephone":13745263112,"pwd":12345678901234567890,"regname":"小蜜蜂"}
+  expect: {"status":0,"code":20108,"data": None,"msg":"密码长度必须为6~18"}
+
+- casedata: {"mobilephone":13745241172,"pwd":null,"regname":"小蜜蜂"}
+  expect: {"status":0,"code":20103,"data": None,"msg":"密码不能为空"}
+

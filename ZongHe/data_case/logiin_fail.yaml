@@ -1,0 +1,17 @@
+- casedata: {"mobilephone":"180666688888","pwd":"abcd_1"}
+  expect: {"status":"0","code":"20111","data":{},"msg":"用户名或者密码错误"}
+
+- casedata: {"mobilephone":"1806666888","pwd":"abcd_1"}
+  expect: {"status":"0","code":"20111","data":{},"msg":"用户名或者密码错误"}
+
+- casedata: {"mobilephone":"18066668888","pwd":""}
+  expect: {"status":"0","code":"20103","data":{},"msg":"密码不能为空"}
+
+- casedata: {"mobilephone":"","pwd":"abcd_1"}
+  expect: {"status":"0","code":"20103","data":{},"msg":"手机号码不能为空"}
+
+- casedata: {"mobilephone":"1806666888","pwd":"abcd_"}
+  expect: {"status":"0","code":"20111","data":{},"msg":"用户名或者密码错误"}
+
+- casedata: {"mobilephone":"1806666888","pwd":"abcd_12345123456789"}
+  expect: {"status":"0","code":"20111","data":{},"msg":"用户名或者密码错误"}
